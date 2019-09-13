@@ -1,7 +1,9 @@
 <template lang="html">
-  <div v-if="film">
+  <div class="details" v-if="film">
   <p>{{film.title}}</p>
-  <p>{{film.id}}</p>
+  <p>{{film.director}}</p>
+  <p>{{film.description}}</p>
+  <p>{{film.people}}</p>
   </div>
 </template>
 
@@ -13,4 +15,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.details {
+  background-color: beige;
+}
 </style>

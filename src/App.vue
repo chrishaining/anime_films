@@ -1,28 +1,35 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template lang="html">
+  <div>
+    <h1>WEEEEEEEEEE!!!</h1>
+    <films-list></films-list>
+    <film-details></film-details>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FilmsList from './components/FilmsList'
+import FilmDetail from './components/FilmDetail'
+import {eventBus} from './main'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  data() {
+    films: [],
+    selectedFilm: null
+  },
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  mounted() {
+    fetch'(https://ghibliapi.herokuapp.com/films')
+      .then(result => result.json()) //is it already in json? If so, I won't need to do this step
+      .then(films => films = this.films)
+    },
+    components: {
+      'films-list': FilmsList,
+      'film-detail': FilmDetail
+    }
 }
-</style>
+
+    </script>
+
+    <style lang="css" scoped>
+    </style>

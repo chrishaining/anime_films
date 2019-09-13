@@ -1,35 +1,43 @@
 <template lang="html">
   <div>
-    <h1>WEEEEEEEEEE!!!</h1>
-    <films-list></films-list>
-    <film-details></film-details>
+    <h1>Anime Films Catalog</h1>
+    <films-list v-bind:films="films"></films-list>
+    <film-details v-bind:film="selectedFilm"></film-details>
   </div>
 </template>
 
 <script>
 import FilmsList from './components/FilmsList'
-import FilmDetail from './components/FilmDetail'
+import FilmDetails from './components/FilmDetails'
 import {eventBus} from './main'
 
 export default {
   name: 'app',
   data() {
-    films: [],
-    selectedFilm: null
+    return {
+      films: [],
+      selectedFilm: null
+    }
   },
 
   mounted() {
-    fetch'(https://ghibliapi.herokuapp.com/films')
-      .then(result => result.json()) //is it already in json? If so, I won't need to do this step
-      .then(films => films = this.films)
-    },
-    components: {
-      'films-list': FilmsList,
-      'film-detail': FilmDetail
-    }
+    fetch('https://ghibliapi.herokuapp.com/films')
+    .then(result => result.json()) //is it already in json? If so, I won't need to do this step
+    .then(films => this.films = films)
+
+    eventBus.$on('film-selected', (film) => {
+      this.selectedFilm = film
+    })
+
+  },
+  components: {
+    'films-list': FilmsList,
+    'film-details': FilmDetails
+  }
 }
 
-    </script>
 
-    <style lang="css" scoped>
-    </style>
+</script>
+
+<style lang="css" scoped>
+</style>

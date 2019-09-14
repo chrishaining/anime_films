@@ -3,7 +3,7 @@
   <p>{{film.title}}</p>
   <p>{{film.director}}</p>
   <p>{{film.description}}</p>
-  <p>{{film.people}}</p>
+  <!-- <p>{{film.people}}</p> -->
   </div>
 </template>
 

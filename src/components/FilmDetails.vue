@@ -33,6 +33,8 @@ export default {
   padding: 0.5em;
   text-align: center;
   border: solid black;
+  max-width: 50%;
+
 
 }
 </style>

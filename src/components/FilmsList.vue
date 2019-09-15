@@ -18,4 +18,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+ul {
+  list-style: none;
+  background-color: #FFB48F;
+  padding: 0.5em;
+}
 </style>

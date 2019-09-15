@@ -26,4 +26,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+ul {
+  list-style: none;
+  background-color: #A64AC9;
+  padding: 0.5em;
+}
 </style>

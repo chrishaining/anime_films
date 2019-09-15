@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <h1>Anime Films Catalog</h1>
+    <h1>Anime Films Catalogue</h1>
 
     <films-list v-bind:films="films"></films-list>
     <film-details v-bind:film="selectedFilm"></film-details>
@@ -61,4 +61,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+h1 {
+  background-color:  #17E9C0;
+}
+
 </style>

@@ -19,13 +19,14 @@ export default {
     addToFavourites: function() {
       eventBus.$emit("favourite-films-item", this.film)
     }
-    
+
   }
 }
 </script>
 
 <style lang="css" scoped>
 .details {
-  background-color: beige;
+  background-color: #FCCD04;
+  padding: 0.5em;
 }
 </style>

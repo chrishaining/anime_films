@@ -1,16 +1,28 @@
 <template lang="html">
   <div class="details" v-if="film">
-  <p>{{film.title}}</p>
-  <p>{{film.director}}</p>
-  <p>{{film.description}}</p>
-  <!-- <p>{{film.people}}</p> -->
+    <p>Title: {{film.title}}</p>
+    <p>Director: {{film.director}}</p>
+    <p>Description: {{film.description}}</p>
+
+    <!-- <button v-if="!favouriteFilms.includes(film)" v-on:click="addToFavourites"> Add to favourites </button> -->
+  <button v-on:click="addToFavourites"> Add to favourites </button>
+
   </div>
 </template>
 
 <script>
+
+import FavouriteFilms from './FavouriteFilms'
+import { eventBus } from '../main'
+
 export default {
   name: 'film-details',
-  props: ['film']
+  props: ['film', 'favourite-films-item'],
+  methods: {
+    addToFavourites: function() {
+      eventBus.$emit("favourite-film", this.film)
+    }
+  }
 }
 </script>
 

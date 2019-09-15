@@ -1,5 +1,6 @@
 <template lang="html">
   <ul>
+    <label>Select a film : </label>
     <film-item v-for="(film, id) in films" v-bind:film="film" v-bind:key="id"></film-item>
   </ul>
 </template>

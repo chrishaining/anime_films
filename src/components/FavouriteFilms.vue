@@ -1,7 +1,11 @@
 <template lang="html">
+
   <ul>
-    <favourite-films-item v-for="(film, id) in favouriteFilms" v-bind:favourite-films-item="favouriteFilmsItem" v-bind:key="id"></favourite-films-item>
+    <label>Favourite Films</label>
+    <!-- <favourite-films-item v-for="(film, id) in favouriteFilms" v-bind:favourite-films-item="favouriteFilmsItem" v-bind:key="id"></favourite-films-item> -->
+      <li v-for="film in favouriteFilms" :value="film">{{film.title}}</li>
   </ul>
+
 </template>
 
 <script>

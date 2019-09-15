@@ -32,7 +32,7 @@ export default {
   background-color: #FCCD04;
   padding: 0.5em;
   text-align: center;
-  border: solid black;
+  border: 0.2em solid black;
   max-width: 50%;
 
 

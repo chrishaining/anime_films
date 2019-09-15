@@ -66,13 +66,13 @@
 
   h1 {
     background-color: #17E9C0;
-    border: solid black;
+    border: 0.1em solid black;
     text-align: center;
   }
 
   #lists-and-details {
     background-color: white;
-    border: solid black;
+    border: 0.2em solid black;
     /* display: inline; */
 
     /* justify-content: ; */

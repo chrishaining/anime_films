@@ -28,7 +28,7 @@ ul {
   padding: 0.5em;
   width: 40%;
   margin: 1em;
-  border: solid black;
+  border: 0.2em solid black;
 }
 
 li:hover {

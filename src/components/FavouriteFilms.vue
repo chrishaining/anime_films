@@ -33,7 +33,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: solid black;
+  border: 0.2em solid black;
   margin: 1em;
 }
 

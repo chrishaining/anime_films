@@ -1,6 +1,6 @@
 <template lang="html">
   <ul>
-    <label>Click a film: </label>
+    <label>Click a film:</label>
     <film-item v-for="(film, index) in films" v-bind:film="film" v-bind:key="index"></film-item>
   </ul>
 </template>
@@ -21,6 +21,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+label {
+  font-size: 1.5em;
+}
 
 ul {
   list-style: none;

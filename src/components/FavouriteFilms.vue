@@ -3,7 +3,7 @@
   <ul>
     <label>Favourite Films</label>
     <li v-for="film in favouriteFilms" :value="film">{{film.title}}
-<button v-on:click="removeFromFavouriteFilms">Remove from Favourites</button>
+      <button v-on:click="removeFromFavouriteFilms">Remove from Favourites</button>
     </li>
   </ul>
 
@@ -26,6 +26,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+label {
+  font-size: 1.5em;
+}
+
 ul {
   list-style: none;
   background-color: #A64AC9;

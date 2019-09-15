@@ -68,6 +68,7 @@
     background-color: #17E9C0;
     border: 0.1em solid black;
     text-align: center;
+    padding: 2%;
   }
 
   #lists-and-details {

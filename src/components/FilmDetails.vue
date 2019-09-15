@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="details" v-if="film">
-    <h1>Film details</h1>
+    <h2>Film details</h2>
     <p>Title: {{film.title}}</p>
     <p>Director: {{film.director}}</p>
     <p>Description: {{film.description}}</p>

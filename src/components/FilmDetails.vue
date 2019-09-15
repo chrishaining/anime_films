@@ -28,7 +28,7 @@ export default {
 <style lang="css" scoped>
 .details {
   margin: 1em;
-  float: right;
+  /* float: right; */
   background-color: #FCCD04;
   padding: 0.5em;
   text-align: center;

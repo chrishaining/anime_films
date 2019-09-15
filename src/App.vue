@@ -4,12 +4,11 @@
     <div id="lists-and-details">
       <films-list v-bind:films="films"></films-list>
       <film-details v-bind:film="selectedFilm"></film-details>
-
-      <div>
-        <favourite-films v-bind:favourite-films="favouriteFilms"></favourite-films>
-      </div>
+    <div>
+      <favourite-films v-bind:favourite-films="favouriteFilms"></favourite-films>
     </div>
   </div>
+</div>
 
 </template>
 
@@ -73,11 +72,14 @@ h1 {
 #lists-and-details {
   background-color: white;
   border: solid black;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  /* display: inline; */
+
+  /* justify-content: ; */
+  /* align-items: flex-start;
+  align-content: flex-start; */
 
 }
+
 
 
 </style>

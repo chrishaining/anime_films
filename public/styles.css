@@ -1,10 +1,28 @@
+body {
+  /* display: flex;
+  flex-direction: row; */
+  font-family: "Lato", sans-serif;
+  background-color: #F5E6CC;
+}
+
 button {
   padding: 0.2em;
   background-color: #17E9E0;
   border-radius: 5px;
   border: ridge 0.1em;
+  box-shadow: 0 0.1em #999;
+  font-weight: bold;
 }
 
 label {
   font-weight: bold;
+}
+
+button:hover {
+  background: #11bbb2 ;
+}
+
+button:active {
+  background: white;
+  box-shadow: 0 0.1em;
 }

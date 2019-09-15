@@ -30,5 +30,19 @@ ul {
   list-style: none;
   background-color: #A64AC9;
   padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid black;
+  margin: 1em;
 }
+
+li {
+  padding: 0.2em;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
+
 </style>

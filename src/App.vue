@@ -1,11 +1,14 @@
 <template lang="html">
-  <div>
+  <div id="main-container">
     <h1>Anime Films Catalogue</h1>
+    <div id="lists-and-details">
+      <films-list v-bind:films="films"></films-list>
+      <film-details v-bind:film="selectedFilm"></film-details>
 
-    <films-list v-bind:films="films"></films-list>
-    <film-details v-bind:film="selectedFilm"></film-details>
-    <favourite-films v-bind:favourite-films="favouriteFilms"></favourite-films>
-
+      <div>
+        <favourite-films v-bind:favourite-films="favouriteFilms"></favourite-films>
+      </div>
+    </div>
   </div>
 
 </template>
@@ -35,6 +38,7 @@ export default {
     eventBus.$on('film-selected', (film) => {
       this.selectedFilm = film
     })
+
     // addToFavourites
     eventBus.$on('favourite-films-item', (film) => {
       if (!this.favouriteFilms.includes(film)) {
@@ -57,12 +61,23 @@ export default {
   }
 }
 
-
 </script>
 
 <style lang="css" scoped>
 h1 {
-  background-color:  #17E9C0;
+  background-color: #17E9C0;
+  border: solid black;
+  text-align: center;
 }
+
+#lists-and-details {
+  background-color: white;
+  border: solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
 
 </style>

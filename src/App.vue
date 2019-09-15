@@ -35,13 +35,18 @@ export default {
     eventBus.$on('film-selected', (film) => {
       this.selectedFilm = film
     })
-
+    // addToFavourites
     eventBus.$on('favourite-films-item', (film) => {
       if (!this.favouriteFilms.includes(film)) {
         this.favouriteFilms.push(film);
       }
     })
 
+    //removeFromFavourites
+    eventBus.$on('favourite-removed', (film) => {
+      const index = this.favouriteFilms.indexOf(film);
+      this.favouriteFilms.splice(index, 1)
+    })
 
   },
   components: {

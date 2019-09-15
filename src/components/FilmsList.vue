@@ -1,7 +1,7 @@
 <template lang="html">
   <ul>
     <label>Select a film : </label>
-    <film-item v-for="(film, id) in films" v-bind:film="film" v-bind:key="id"></film-item>
+    <film-item v-for="(film, index) in films" v-bind:film="film" v-bind:key="index"></film-item>
   </ul>
 </template>
 

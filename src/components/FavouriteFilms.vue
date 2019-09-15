@@ -2,27 +2,26 @@
 
   <ul>
     <label>Favourite Films</label>
-    <!-- <favourite-films-item v-for="(film, id) in favouriteFilms" v-bind:favourite-films-item="favouriteFilmsItem" v-bind:key="id"></favourite-films-item> -->
-      <li v-for="film in favouriteFilms" :value="film">{{film.title}}</li>
+    <li v-for="film in favouriteFilms" :value="film">{{film.title}}
+<button v-on:click="removeFromFavouriteFilms">Remove from Favourites</button>
+    </li>
   </ul>
 
 </template>
 
 <script>
 import FavouriteFilmsItem from './FavouriteFilmsItem'
+import { eventBus } from '../main.js'
 
 export default {
   name: 'favourite-films',
-  // data(){
-  //   return {
-  //     "favouriteFilm": {}
-  //   }
-  // },
-
+  methods: {
+    removeFromFavouriteFilms: function() {
+      eventBus.$emit("favourite-removed", this.film)
+    }
+  },
   props: ['favourite-films'],
   components: {'favourite-films-item': FavouriteFilmsItem},
-
-
 }
 </script>
 

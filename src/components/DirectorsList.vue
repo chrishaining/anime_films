@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <div>
-      <director-item v-for="(director, id) in directorsList" v-bind:director="directorItem" v-bind:key="id"></director-item>
+      <director-item v-for="(director, id) in directorsList" v-bind:director-item="directorItem" v-bind:key="id"></director-item>
 
     </div>
     <!-- <label>Search for films by director</label>
@@ -41,7 +41,7 @@ export default {
 
     props: ['directors-list'],
     components: {'director-item': DirectorItem,
-  'director': Director}
+    'director': Director}
   }
 }
 

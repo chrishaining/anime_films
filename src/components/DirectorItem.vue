@@ -1,9 +1,9 @@
 <template lang="html">
   <div>
-    <director v-bind:director="director"></director>
-  <li v-on:click="handleDirectorClick">{{director}}</li>
+    <!-- <director v-bind:director="director"></director> -->
+    <li v-on:click="handleDirectorClick">{{director}}</li>
 
-</div>
+  </div>
 </template>
 
 <script>
@@ -16,8 +16,8 @@ export default {
     handleDirectorClick() {
       eventBus.$emit('director-selected', this.director)
     }
-  },
-  components: {'director': Director}
+  }
+  // components: {'director': Director}
 }
 
 </script>
